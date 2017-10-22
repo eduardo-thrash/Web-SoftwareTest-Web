@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
 
@@ -8,32 +8,31 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Técnicas de pruebas de software</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link reference CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- End  -->
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Link reference JS -->
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <!-- End  -->
+
+    <!-- Link reference fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<!-- End fonts-->
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <title>Lecturas</title>
 
   </head>
 
-  <body id="page-top">
+  <body>
 
     <!-- Navigation -->
     <nav>
       <span>TECNICAS DE PRUEBAS DE SOFTWARE</span>
-      <ul>
+      <ul id="menu">
         <li>
           <a href="index.html" class="dropbtn">Inicio</a>
         </li>
@@ -68,37 +67,450 @@
       </ul>
     </nav>
 
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">Tecnicas de pruebas de software</h1>
-          <hr>
-          <p>En un proyecto de desarrollo de software los bugs o errores son incalculables teniendo en cuenta los escenarios que pueden identificarse en la fase de pruebas o en la fase de producción.</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Sigue para ver más información.</a>
-        </div>
-      </div>
+
+
+    <hr>
+    <header>
+      <section>
+        <hgroup>
+          <h1>Técnicas basadas en la estructura o de caja blanca (“white box ”)</h1>
+          <h4>
+            Estas técnicas representan las técnicas de pruebas dinámicas más importantes
+            y utilizadas de forma más frecuente.
+          </h4>
+        </hgroup>
+      </section>
     </header>
-    <section id="contact">
-      <div class="container">
-        <p>
-          Aunque se intente detectar todos los errores de una aplicación o sistema informático, hay errores que permanecen sin ser detectados. Pero pueden mitigarse gran cantidad de ellos aplicando técnicas ligadas a cada parte de un sistema.
-        </p>
-        <span><br><hr></span>
-        <div class="row">
-            <p>
-              Lecturas
-            </p>
-            <p>
-              Multimedia
-            </p>
-            <p>
-              Actividades
-            </p>
-            <p>
-              Autores
-            </p>
-        </div>
-      </div>
+    <hr>
+    <section id="readingsOne">
+      <section>
+        <article id= "text_body">
+          <p>
+            Las tecnicas de caja negra permiten intuir en base a experiencia y conocimientos, diversos
+            problema que podría generar un software. Para hacer pruebas de caja negra se debe pensar como
+            un usuario y ejecutar funciones comunes.
+            Al usuario poco le importan los métodos, él solo desea la ejecución de una acción, es decir,
+            resultados.
+            <br />
+            Por otro lado, las pruebas de caja blanca son un tanto más específicas.
+            <br />
+            Tas haber detectado el error en un módulo con una prueba de caja negra, se debe conocer un error,
+            ese modulo puede y debe revisarse con pruebas de caja blanca, ya sea manuales o automáticos, para
+            determinar la falla específica y corregirla.
+          </p>
+            <img src=".\img\pruebas-de-caja-negra-ejemplo.jpg"/>
+          <p>
+            Recorrer los caminos de ejecución es la prueba de caja blanca más utilizada, ya que permite
+            optimizar al máximo la rapidez de un sistema.
+            <br />
+            Los mejores ejemplos de caja negra y blanca ilustran como ambas son necesarias antes del
+            lanzamiento de un software.
+            <br />
+            En la práctica y la teoría de sistemas, las pruebas de caja negra y blanca son los exámenes
+            funcionales más idóneos para encontrar anomalías.
+          </p>
+          <p>
+            La fase de pruebas es una de las más costosas del ciclo de vida software. En sentido estricto,
+             deben realizarse pruebas de todos los artefactos generados durante la construcción de un producto,
+             lo que incluye especificaciones de requisitos, casos de uso, diagramas de diversos tipos y, por supuesto, el código fuente y el resto de productos que forman parte de la aplicación. Obviamente, se aplican diferentes técnicas de prueba a cada tipo de producto software.
+            <br />
+            Una vez generado el código el software debe ser probado para descubrir el máximo de errores
+            posibles antes de su entrega al cliente. Es probado para descubrir errores cometidos sin darse
+            cuenta al realizar su diseño y construcción La prueba requiere una mayor cantidad del esfuerzo
+            dedicado al proyecto que cualquier otra actividad de ingeniería del software.
+            <br />
+            El ingeniero crea una serie de casos de prueba que intentan "demoler" el software que ha sido
+            construido. Tiene como objetivos:
+          </p>
+          <p>
+          <ul id="list">
+            <li>
+              1. La prueba es un proceso de ejecución de un programa con la intención de descubrir un error.
+            </li>
+            <li>
+              2. Un buen caso de prueba es aquel que tiene una alta probabilidad de mostrar un error no
+              descubierto hasta entonces.
+            </li>
+            <li>
+              3. Una prueba tiene éxito si descubre un error no detectado hasta entonces.
+            </li>
+          </ul>
+          <p>
+            Por lo tanto hay que diseñar pruebas que saque a la luz diferentes clases de errores,
+            haciéndolo con la menor cantidad de tiempo y esfuerzo. Inclusive tiene como ventaja ver hasta
+            qué punto las funciones parecen funcionar de acuerdo con las especificaciones y cumplir así los
+            requisitos de rendimiento.
+          </p>
+          <p>
+            Para realizar pruebas efectivas un equipo de software debe efectuar revisiones técnicas formales
+            y efectivas. Esto elimina muchos errores antes de empezar las pruebas. La prueba comienza al nivel
+            de componentes y trabaja “hacia fuera”, hacia la integración de todo el sistema de cómputo. Las
+            pruebas deberían empezar por lo "pequeño" y progresar hacia "lo grande" (módulos). Diferentes
+            técnicas de prueba son apropiadas en diferentes momentos. La prueba la dirige el desarrollador
+            del software y en proyectos grandes un grupo independiente de pruebas. Las pruebas deberían
+            planificarse mucho antes de que empiecen. La prueba y la depuración son actividades diferentes,
+            pero ambas se incluyen en la estrategia de pruebas. A todas las pruebas se les debería poder
+            hacer un seguimiento hasta los requisitos del cliente. No son posibles las pruebas exhaustivas
+            (imposible ejecutar todas las combinaciones de caminos). Para ser más eficaces, las pruebas
+            deberían ser realizadas por un equipo independiente. Un error es diseñar y ejecutar pruebas
+            que solamente demuestren el buen funcionamiento del programa en lugar de descubrir errores.
+          </p>
+          <p>
+            Hay dos maneras de probar cualquier producto:
+          </p>
+          <ul id="list">
+            <li>
+              1. Si se conoce la función específica para la que se diseño el producto se aplican pruebas que
+              demuestren que cada función es plenamente operacional, mientras se buscan los errores de cada
+              función.
+            </li>
+            <li>
+              2. Si se conoce el funcionamiento interno el producto, se aplican pruebas para asegurar que todas
+              las piezas encajen, es decir, que las operaciones internas se realicen de acuerdo con las
+              especificaciones.
+            </li>
+          </ul>
+          <p>
+            El software debe probarse desde dos perspectivas diferentes:
+          </p>
+          <ul id="list">
+            <li>
+              1. La lógica interna del programa utilizando técnicas de diseño de casos de prueba de
+              "caja
+              blanca"
+            </li>
+            <li>
+              2. Los requisitos del software utilizando técnicas de diseño de casos de prueba
+              de "caja negra"
+            </li>
+          </ul>
+          <p>
+            En programación, se denomina cajas blancas a un tipo de pruebas de software que se
+            realiza sobre
+            las funciones internas de un módulo. Así como las pruebas de caja negra ejercitan los
+            requisitos
+            funcionales desde el exterior del modulo, las de caja blanca están dirigidas a las funciones
+            internas. Entre las técnicas usadas se encuentran; la cobertura de caminos
+            (pruebas que hagan que
+            se recorran todos los posibles caminos de ejecución), pruebas sobre las expresiones
+            lógico-aritméticas, pruebas de camino de datos (definición-uso de variables),
+            comprobación de
+            bucles (se verifican los bucles para 0,1 y n iteraciones, y luego para las
+            iteraciones máximas,
+            máximas menos uno y más uno.
+          </p>
+          <p>
+            Las pruebas de caja blanca se llevan a cabo en primer lugar, sobre un módulo
+            concreto, para luego
+            realizar las de caja negra sobre varios subsistemas (integración).
+            <br />
+            En los sistemas orientados a objetos, las pruebas de caja blanca pueden aplicarse
+            a los métodos de
+            la clase, pero según varias opiniones, ese esfuerzo debería dedicarse a otro tipo de
+            pruebas más especializadas (un argumento podría ser que los métodos de una clase suelen ser menos complejos que los de una función de programación estructurada).
+            <br />
+            Las pruebas de caja blanca realizan un seguimiento del código fuente según va ejecutando
+            los casos
+            de prueba, de manera que se determinan de manera concreta las instrucciones, bloques,
+            etc. en los
+            que existen errores. Cuando se pasan casos de prueba al programa que se está probando, es
+            conveniente conocer qué porcentaje del programa se ha ejecutado, de manera que estemos
+            próximos a asegurar que todo él es correcto (evidentemente, es imposible alcanzar una
+            certeza del 100%). Existen varias formas de medir la cobertura lograda en el programa por
+            los casos de prueba, algunas de las cuales se presentan en el siguiente epígrafe:
+          </p>
+          <p>
+            La fase de pruebas es una de las más costosas del ciclo de vida software. En sentido estricto,
+            deben realizarse pruebas de todos los artefactos generados durante la construcción de un producto,
+            lo que incluye especificaciones de requisitos, casos de uso, diagramas de diversos tipos y, por
+            supuesto, el código fuente y el resto de productos que forman parte de la aplicación.
+            Obviamente, se aplican diferentes técnicas de prueba a cada tipo de producto software.
+            <br />
+            Una vez generado el código el software debe ser probado para descubrir el máximo de errores
+            posibles antes de su entrega al cliente. Es probado para descubrir errores cometidos
+            sin darse cuenta al realizar su diseño y construcción La prueba requiere una mayor
+            cantidad del esfuerzo dedicado al proyecto que cualquier otra actividad de ingeniería
+            del software.
+            <br />
+            El ingeniero crea una serie de casos de prueba que intentan "demoler" el software
+            que ha sido construido. Tiene como objetivos:
+          </p>
+          <ul id="list">
+            <li>
+              1. La prueba es un proceso de ejecución de un programa con la intención de
+              descubrir un error.
+            </li>
+            <li>
+              2. Un buen caso de prueba es aquel que tiene una alta probabilidad de mostrar
+              un error no descubierto hasta entonces.
+            </li>
+            <li>
+              3. Una prueba tiene éxito si descubre un error no detectado hasta entonces.
+            </li>
+          </ul>
+          <p>
+            Por lo tanto hay que diseñar pruebas que saque a la luz diferentes clases de errores,
+            haciéndolo con la menor cantidad de tiempo y esfuerzo. Inclusive tiene como ventaja
+            ver hasta qué punto las funciones parecen funcionar de acuerdo con las especificaciones
+            y cumplir así los requisitos de rendimiento.
+            <br />
+            Para realizar pruebas efectivas un equipo de software debe efectuar revisiones técnicas
+            formales y efectivas. Esto elimina muchos errores antes de empezar las pruebas.
+            La prueba comienza al nivel de componentes y trabaja “hacia fuera”, hacia la
+            integración de todo el sistema de cómputo. Las pruebas deberían empezar por lo
+            "pequeño" y progresar hacia "lo grande" (módulos). Diferentes técnicas de prueba
+            son apropiadas en diferentes momentos. La prueba la dirige el desarrollador del
+            software y en proyectos grandes un grupo independiente de pruebas. Las pruebas
+            deberían planificarse mucho antes de que empiecen. La prueba y la depuración
+            son actividades diferentes, pero ambas se incluyen en la estrategia de pruebas.
+            A todas las pruebas se les debería poder hacer un seguimiento hasta los
+            requisitos del cliente. No son posibles las pruebas exhaustivas
+            (imposible ejecutar todas las combinaciones de caminos).
+            Para ser más eficaces, las pruebas deberían ser realizadas por un equipo
+            independiente. Un error es diseñar y ejecutar pruebas que solamente
+            demuestren el buen funcionamiento del programa en lugar de
+            descubrir errores.
+            <br />
+            Hay dos maneras de probar cualquier producto:
+          </p>
+          <p>
+            En programación, se denomina cajas blancas a un tipo de pruebas de software
+            que se realiza sobre las funciones internas de un módulo. Así como las pruebas
+            de caja negra ejercitan los requisitos funcionales desde el exterior del modulo,
+            las de caja blanca están dirigidas a las funciones internas. Entre las técnicas
+            usadas se encuentran; la cobertura de caminos (pruebas que hagan que se
+            recorran todos los posibles caminos de ejecución), pruebas sobre las
+            expresiones lógico-aritméticas, pruebas de camino de datos
+            (definición-uso de variables), comprobación de bucles
+            (se verifican los bucles para 0,1 y n iteraciones, y
+            luego para las iteraciones máximas, máximas menos uno y más uno.
+          </p>
+          <p>
+            Las pruebas de caja blanca se llevan a cabo en primer lugar,
+            sobre un módulo concreto, para luego realizar las de caja negra sobre
+            varios subsistemas (integración).
+          </p>
+          <p>
+            En los sistemas orientados a objetos, las pruebas de caja blanca pueden
+            aplicarse a los métodos de la clase, pero según varias opiniones,
+            ese esfuerzo debería dedicarse a otro tipo de pruebas más especializadas
+            (un argumento podría ser que los métodos de una clase suelen ser menos
+            complejos que los de una función de programación estructurada).
+          </p>
+          <p>
+            Las pruebas de caja blanca realizan un seguimiento del código fuente según
+            va ejecutando los casos de prueba, de manera que se determinan de manera
+            concreta las instrucciones, bloques, etc. en los que existen errores.
+            Cuando se pasan casos de prueba al programa que se está probando, es conveniente
+            conocer qué porcentaje del programa se ha ejecutado, de manera que estemos
+            próximos a asegurar que todo él es correcto (evidentemente, es imposible alcanzar
+            una certeza del 100%). Existen varias formas de medir la cobertura lograda en
+            el programa por los casos de prueba, algunas de las cuales se presentan en el
+            siguiente epígrafe:
+          </p>
+          <h3>
+            Criterios de cobertura
+          </h3>
+          <p>
+            De acuerdo con (Cornett 2002), el análisis de cobertura del código es el proceso de:
+          </p>
+          <ul id="list">
+            <li>
+              - Encontrar fragmentos del programa que no son ejecutados por los casos de prueba.
+            </li>
+            <li>
+              - Crear casos de prueba adicionales que incrementen la cobertura.
+            </li>
+            <li>
+              - Determinar un valor cuantitativo de la cobertura (que es, de manera indirecta,
+              una medida de la calidad del programa).
+            </li>
+          </ul>
+          <p>
+            Adicionalmente, el análisis de cobertura también permite la identificación de
+            casos de prueba redundantes, que no incrementan la cobertura.
+          </p>
+          <h5>
+            1. Cobertura de sentencias:
+          </h5>
+          <p>
+            Comprueba el número de sentencias ejecutables que se
+            han ejecutado. Mantenimiento Avanzado de Sistemas de Información – Pruebas del
+            software. Por segmento se entiende una secuencia de sentencias sin puntos de
+            decisión. Como el ordenador está obligado a ejecutarlas una tras otra, es lo
+            mismo decir que se han ejecutado todas las sentencias o todos los segmentos.
+            <br />
+            El número de sentencias de un programa es finito. Basta coger el código
+            fuente e ir contando. Se puede diseñar un plan de pruebas que vaya ejercitando
+            más y más sentencias, hasta que hayamos pasado por todas, o por una inmensa mayoría.
+            <br />
+            En la práctica, el proceso de pruebas termina antes de llegar al 100%,
+            pues puede ser excesivamente laborioso y costoso provocar el paso por
+            todas y cada una de las sentencias.
+            <br />
+            A la hora de decidir el punto de corte antes de llegar al 100% de
+            cobertura hay que ser precavido y tomar en consideración algo más
+            que el índice conseguido. En efecto, ocurre con harta frecuencia
+             que los programas contienen código muerto o inalcanzable.
+            Puede ser que este trozo del programa, simplemente "sobre" y
+            se pueda prescindir de él; pero a veces significa que una
+            cierta funcionalidad, necesaria, es inalcanzable: esto es un error y
+            hay que corregirlo.
+          </p>
+          <h5>
+            2. Cobertura de decisiones:
+          </h5>
+          <p>
+            Comprueba el número de decisiones ejecutadas,
+            considerando que se ha ejecutado una decisión cuando se han recorrido todas
+            sus posible ramas (la que la hace true y la que la hace false, pero también todas
+            las posibles ramas de un switch). Desde el punto de vista de cobertura de segmentos,
+            basta ejecutar una vez, con éxito en la condición, para cubrir todas las sentencias
+            posibles. Sin embargo, desde el punto de vista de la lógica del programa, también
+            debe ser importante el caso de que la condición falle (si no lo fuera, sobra el IF).
+            Sin embargo, como en la rama ELSE no hay sentencias, con 0 ejecuciones tenemos
+            el 100%. Para afrontar estos casos, se plantea un refinamiento de la cobertura
+            de segmentos consistente en recorrer todas las posibles salidas de los puntos
+            de decisión. Para el ejemplo de arriba, para conseguir una cobertura de ramas del
+            100% hay que ejecutar (al menos) 2 veces, una satisfaciendo la condición, y otra no.
+            Estos criterios se extienden a las construcciones que suponen elegir 1 de entre
+            varias ramas. Por ejemplo, el CASE. Nótese que si lográramos una cobertura de ramas
+            del 100%, esto llevaría implícita una cobertura del 100% de los segmentos, pues
+            todo segmento está en alguna rama. Esto es cierto salvo en programas triviales
+            que carecen de condiciones (a cambio, basta 1 sola prueba para cubrirlo desde
+            todos los puntos de vista). El criterio también debe refinarse en lenguajes que
+            admiten excepciones (por ejemplo, Ada). En estos casos, hay que añadir pruebas
+            para provocar la ejecución de todas y cada una de las excepciones que pueden
+            dispararse.
+          </p>
+          <h5>
+            3. Cobertura de condiciones:
+          </h5>
+          <p>
+            Comprueba el número de condiciones ejecutadas, entendiendo
+            que se ha ejecutado una condición cuando se han ejecutado todas sus posibles ramas.
+          </p>
+          <h5>
+            4. Cobertura de condiciones múltiples:
+          </h5>
+          <p>
+            Comprueba el número de condiciones múltiples
+            ejecutadas, considerando que se ha ejecutado una condición múltiple cuando se han
+            ejecutado todas sus correspondientes ramas con todas las posibles variantes de la
+            instrucción condicional.
+          </p>
+          <h5>
+            5. Cobertura de condiciones/decisiones:
+          </h5>
+          <p>
+            Comprueba el número de condiciones y
+            decisiones que se han ejecutado.
+          </p>
+          <h5>
+            6. Cobertura de caminos:
+          </h5>
+          <p>
+            Comprueba el número de caminos linealmente independientes
+            que se han ejecutado en el grafo de flujo de la unidad que se está probando.
+            El número de caminos linealmente independientes coincide con la complejidad ciclomática de McCabe.
+          </p>
+          <h5>
+            7. Cobertura de funciones:
+          </h5>
+          <p>
+            Comprueba el número de funciones y procedimientos
+            que han sido llamados.
+          </p>
+          <h5>
+            8. Cobertura de llamadas:
+          </h5>
+          <p>
+           Comprueba el número de llamadas a funciones y procedimientos
+           que se han ejecutado. No debe confundirse con la cobertura de funciones: en la
+           cobertura de funciones contamos cuántas funciones de las que hay en nuestro
+           proMantenimiento Avanzado de Sistemas de Información – Pruebas del software grama han
+           sido llamadas, mientras que la cobertura de llamadas cuenta cuántas de las llamadas a
+           funciones que hay en el programa se han ejecutado.
+          </p>
+          <h5>
+            9. Cubrimiento de bucles:
+          </h5>
+          <p>
+            Comprueba el número de bucles que han sido ejecutados
+            cero veces (excepto para bucles do -While), una vez y más de una vez. Los bucles
+            no son más que segmentos controlados por decisiones. Así, la cobertura de ramas
+            cubre plenamente la esencia de los bucles. Pero eso es simplemente la teoría,
+            pues la práctica descubre que los bucles son una fuente inagotable de errores,
+            todos triviales, algunos mortales. Un bucle se ejecuta un cierto número de veces;
+            pero ese número de veces debe ser muy preciso, y lo más normal es que ejecutarlo una
+            vez de menos o una vez de más tenga consecuencias indeseables. Y, sin embargo, es
+            extremadamente fácil equivocarse y redactar un bucle que se ejecuta 1 vez de más
+            o de menos. Para un bucle de tipo WHILE hay que pasar 3 pruebas
+          </p>
+          <ul id="list">
+            <li>
+              1. 0 ejecuciones
+            </li>
+            <li>
+              2. 1 ejecución
+            </li>
+            <li>
+              3. más de 1 ejecución
+            </li>
+          </ul>
+          <p>
+            Para un bucle de tipo REPEAT hay que pasar 2 pruebas
+          </p>
+          <ul id="list">
+            <li>
+              1. 1 ejecución
+            </li>
+            <li>
+              2. más de 1 ejecución
+            </li>
+          </ul>
+          <p>
+            Los bucles FOR, en cambio, son muy seguros, pues en su cabecera está definido el número de
+            veces que se va a ejecutar. Ni una más, ni una menos, y el compilador se encarga de
+            garantizarlo. Basta pues con ejecutarlos 1 vez. No obstante, conviene no engañarse con
+            los bucles FOR y examinar su contenido. Si dentro del bucle se altera la variable de
+            control, o el valor de alguna variable que se utilice en el cálculo del incremento o
+            del límite de iteración, entonces eso es un bucle FOR con trampa. También tiene "trampa"
+            si contiene sentencias del tipo EXIT (que algunos lenguajes denominan BREAK) o del tipo RETURN.
+            Todas ellas provocan terminaciones anticipadas del bucle. Estos últimos párrafos hay que
+            precisarlos para cada lenguaje de programación. Lo peor son aquellos lenguajes que
+             permiten el uso de sentencias GOTO. Tampoco conviene confiarse de lo que prometen
+             lenguajes como MODULA-2, que se supone que prohíben ciertas construcciones arriesgadas.
+             Los compiladores reales suelen ser más tolerantes que lo que anuncian los libros.
+             Si el programa contiene bucles LOOP, o simplemente bucles con trampa, la única cobertura
+             aplicable es la de ramas. El riesgo de error es muy alto; pero no se conocen técnicas
+             sistemáticas de abordarlo, salvo reescribir el código.
+          </p>
+          <h5>
+            10. Cubrimiento de carrera:
+          </h5>
+          <p>
+            Comprueba el número de tareas o hilos que han ejecutado
+            simultáneamente el mismo bloque de código.
+          </p>
+          <h5>
+            11. Cobertura de operadores relacionales:
+          </h5>
+          <p>
+            Comprueba si se han ejecutado los valores
+            límite en los operadores relacionales (>, <, >=, <=), ya que se asume la hipótesis de que estas situaciones son propensas a errores.
+          </p>
+          <h5>
+            12. Cobertura de tablas:
+          </h5>
+          <p>
+            Comprueba si se ha hecho referencia a todos los elementos de los arrays.
+          </p>
+        </article>
+      </section>
+      <aside>
+        <span>Ventana Twitter</span>
+      </aside>
     </section>
 
     <footer id="">
@@ -123,19 +535,6 @@
           </p>
         <hr>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/scrollreveal/scrollreveal.min.js"></script>
-    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
 
   </body>
 

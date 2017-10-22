@@ -11,6 +11,7 @@
     <!-- Link reference CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!--<link rel="stylesheet" href="css/creative.min.css">-->
     <!-- End  -->
 
     <!-- Link reference JS -->
@@ -29,34 +30,36 @@
 
   <body>
 
+    <!-- Navigation -->
     <nav>
       <span>TECNICAS DE PRUEBAS DE SOFTWARE</span>
-      <ul>
+      <ul id="menu">
         <li>
           <a href="index.html" class="dropbtn">Inicio</a>
         </li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">Lecturas</a>
           <div class="dropdown-content">
-            <a href="#">Lecturas 1</a>
-            <a href="#">Lecturas 2</a>
-            <a href="#">Lecturas 3</a>
-            <a href="#">Lecturas 4</a>
-            <a href="#">Lecturas 5</a>
+            <a href="readingsOne.html">Lecturas 1</a>
+            <a href="readingsTwo.html">Lecturas 2</a>
+            <a href="readingsThree.html">Lecturas 3</a>
+            <a href="readingsFour.html">Lecturas 4</a>
+            <a href="readingsFive.html">Lecturas 5</a>
           </div>
         </li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">Multimedia</a>
           <div class="dropdown-content">
-            <a href="#">Multimedia 1</a>
-            <a href="#">Multimedia 2</a>
+            <a href="multimediaOne.html">Multimedia 1</a>
+            <a href="multimediaTwo.html">Multimedia 2</a>
           </div>
         </li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">Actividades</a>
           <div class="dropdown-content">
-            <a href="#">Actividades 1</a>
-            <a href="#">Actividades 2</a>
+            <a href="activitiesOne.html">Actividades 1</a>
+            <a href="activitiesTwo.html">Actividades 2</a>
+            <a href="activitiesThree.html">Actividades 3</a>
           </div>
         </li>
         <li>
@@ -72,7 +75,9 @@
       <section>
         <hgroup>
           <h1>Técnicas basadas en la estructura o de caja negra</h1>
-          <h4>procedimiento para obtener y/o seleccionar casos de prueba basados en el análisis de la especificación</h4>
+          <h4>
+            procedimiento para obtener y/o seleccionar casos de prueba basados en el análisis de la especificación
+          </h4>
         </hgroup>
       </section>
     </header>
@@ -81,20 +86,209 @@
       <section>
         <article id= "text_body">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem elit, ullamcorper at egestas eget, venenatis sit amet magna. Proin mollis lorem augue, sed finibus ante ultrices sit amet. Nullam rhoncus velit sed purus pharetra, sit amet fermentum mi varius. Sed ut vestibulum ex, ut efficitur est. In varius, nunc vulputate porta pharetra, dolor mauris imperdiet velit, nec consequat odio urna ut tortor. Ut sed interdum risus. Etiam a lectus auctor, blandit nisl eget, lobortis sapien. Sed lobortis lorem quis mi commodo auctor. Proin interdum ut urna vel laoreet. Aliquam a imperdiet lacus, non efficitur lectus. Donec vel ligula mattis tellus tincidunt sagittis. Nunc sit amet mauris risus. Phasellus rhoncus rhoncus tempus. Mauris non arcu sed est maximus fermentum. Nulla porta orci sodales, vestibulum sapien ac, pellentesque sem. Phasellus condimentum nisi eu sapien posuere venenatis.
+            Las pruebas de caja negra, también denominadas por el ISTQB como técnicas basadas en especificación, son una forma de derivar y seleccionar condiciones, datos y casos de prueba a partir de la documentación de requerimientos del sistema.
+            Las pruebas de caja negra no utilizan ninguna información interna de los componentes de software o sistemas que se van a probar, sino que consideran el comportamiento del software desde el punto de vista de un observador externo (.Como los usuarios del sistema).
+            En este articulo, te presentamos información sobre que son las pruebas de caja negra, las pruebas funcionales y sus principales técnicas, como son las particiones de equivalencias, análisis de valores borde, tablas de decisión, transición entre estados, pruebas de casos de uso e historias de usuario.
+            También comentamos sobre las pruebas de caja negra en Agile Testing y los conocimientos que se necesitan para poderlas ejecutar.
+            Pruebas de caja negra y pruebas funcionales.<br>
+            En los estándares para Software Testing definidos por ISTQB, las técnicas de pruebas de caja negra son utilizadas para realizar pruebas funcionales, basadas en las funciones o características del sistema y su interacción con otros sistemas o componentes.
+            Las funciones del software son descritas en los documentos de especificación funcional. Se pueden utilizar técnicas basadas en especificación para identificar las condiciones y casos de prueba a partir de la funcionalidad del software.
           </p>
           <p>
-            Nam eu sem at ipsum tempor sodales vel et sem. Integer erat enim, porttitor vel feugiat elementum, fermentum a est. Donec id massa non turpis sagittis suscipit dictum nec erat. Sed posuere ac tortor sit amet vehicula. Sed fermentum hendrerit mauris vel feugiat. Vivamus in enim pretium, tristique orci vel, commodo dolor. Sed interdum non erat vel tincidunt. Nulla facilisi.
+            Esta técnica, consiste entonces en la construcción de casos prueba por cada entrada posible sin importar su valides. Sin embargo sería una tarea  fuera de los límites de un proyecto de común, para lo cual existen entonces algunos métodos que se encargan de simplificar esta labor y que cubren los aspectos esperados de una prueba de certificación de software.
+            Los métodos a tratar en esta entrada entonces son:
+          </p>
+          <h3>Método de clases de equivalencia:</h3>
+          <p>
+            Este método consiste en realizar agrupaciones de clases por comportamientos, se agrupan entonces los datos de entrada y de salida en clases diferentes en la que todos los componentes de cada clase están relacionados por su comportamiento.
+            Cada una de estas clases será llamada una partición de equivalencia en la que el programa posee el mismo comportamiento indiferente de cual sea la entrada.
+            Se debe seleccionar un elemento representativo de la clase, donde se supone que si la agrupación es correcta, el sistema tendrá el mismo comportamiento para cualquier otro valor.
+            Para la aplicación de este método debemos de seguir 2 pasos:
+          </p>
+          <h4>1. Identificación de las clases de equivalencia</h4>
+          <p>
+            Identificamos las clases según el posible comportamiento de los valores
+          </p>
+            <img src=".\img\TablaClases.png"/>
+          <p>
+            Si se considera o existe una razón para detectar que los valores de una clase no son idénticos,  se debe dividir en clases menores.
+          </p>
+          <h4>2. Identificación de los casos prueba.</h4>
+          <p>
           </p>
           <p>
-            Nulla facilisi. Sed viverra fermentum dolor, sed rutrum eros vehicula at. Nunc nec condimentum diam. Integer egestas ex in convallis mollis. Ut vel mauris vestibulum dolor elementum tincidunt. Suspendisse condimentum faucibus nibh. Nullam vestibulum aliquet sagittis. Morbi pellentesque ante sit amet velit dictum vestibulum. Duis et nulla tellus. Ut ultricies metus sapien, vel auctor mi iaculis non. Etiam faucibus ante eu ligula consequat luctus. Suspendisse a vulputate orci. Nulla facilisis placerat egestas. Morbi vel nisi cursus erat tincidunt dictum. Cras ac mauris nibh.
-          </p>
+            Un caso de prueba está formado por un dato de prueba para cada dato de entrada y salida (resultado esperado)
+            Basados en esto, estructuramos nuestros casos prueba, bajo las siguientes pautas:
+            <br>
+            <ul id="list">
+              <li>
+                El objetivo es probar todas las clases válidas y no válidas al menos una vez cada una de ellas
+              </li>
+              <li>
+                Cada caso debe cubrir el máximo numero de entradas
+              </li>
+              <li>
+                En un caso de prueba pueden aparecer varias clases de entrada válidas
+              </li>
+              <li>
+                En un caso de prueba solamente puede aparecer una entrada no válida. El criterio para las clases no válidas impide que los errores se enmascaren mutuamente
+              </li>
+              <li>
+                Se debe especificar el resultado esperado
+              </li>
+            </ul>
+            <p>
+              Con estas pautas seguimos los siguientes pasos:
+            </p>
+            <ul id="list">
+              <li>
+                Asignar un número único a cada clase de equivalencia
+              </li>
+              <li>
+                Escribir casos de prueba hasta que sean cubiertas todas las clases de equivalencias validas, intentando cubrir en cada caso tantas como sea posible
+              </li>
+              <li>
+                Para cada Clase de Equivalencia Invalida, escribir un caso de prueba, cubriendo en cada caso tantas como sea posible.
+              </li>
+            </ul>
+            <p>
+              Ejemplo:  result function (x, y, z) . Sean Vi las clases válidas y Ni las clases inválidas
+              <br/>
+              Clases de x: V1, N1,N2
+              <br/>
+              Clases de y: V2,N3
+              <br/>
+              Clases de z: V3, N4, N5
+              <br/>
+              Clases de result: V4, N6, N7
+              <br/>
+              Un posible caso de prueba sería: ( x1 en V1, y1 en V2, z1 en V3, r1 en V4)
+            </p>
+            <p>
+            <h3>
+              Método de Análisis de valores frontera o valores limite:
+            </h3>
+            <p>
+              Este método parte de del método de clases de equivalencia, su diferencia radica en el modo de generar los casos prueba, en este caso mas que seleccionar cualquier elemento como representativo de la clase de equivalencia, el análisis de valor limite requiere que se seleccionen uno o más elementos de forma tal que cada margen de la clase de equivalencia sea sujeto  a una prueba .
+              <br />
+              Los casos de prueba se derivan también de considerando el espacio de resultados (clases de equivalencia de salida) .
+              <br />
+              La diferencia entre esta técnica y la de las particiones de equivalencia es que se exploran en estas situaciones existentes sobre y alrededor de los bordes de las particiones de equivalencia.
+              <img src=".\img\TablaLimite.png"/>
+              <br />
+              con estas premisas, entonces estructurar los casos de salida de la siguiente forma:
+              <ul id="list">
+                <li>
+                  1. Usar el rango de valores para los valores de salida, o sea su calculo debe dar entre 1 y 100. escribir casos de prueba que causen salidas de 1 y 100.
+                </li>
+                <li>
+                  2. Usar el numero de valores para la salida
+                </li>
+                <li>
+                  3. Analizar las posibles situaciones para encontrar otros limites.
+                </li>
+              </ul>
+            </p>
+            <h3>
+              Método Grafos Causa/Efecto y tablas de decisión:
+            </h3>
+            <p>
+                El uso de grafos de causa - efecto es una técnica de casos de prueba que proporciona una concisa representación de las condiciones lógicas y sus correspondientes acciones. La técnica sigue cuatro pasos:
+            </p>
+            <ul id="list">
+              <li>
+                1. Se listan para un módulo las causas (condiciones de entrada) y los efectos (acciones), asignando un identificador a cada uno de ellos.
+              </li>
+              <li>
+                2. Se desarrolla un grafo causa - efecto
+              </li>
+              <li>
+                3. Se convierte el grafo en una tabla de decisión
+              </li>
+              <li>
+                4. Se convierten las reglas de la tabla de decisión a casos de prueba
+              </li>
+            </ul>
+            <p>
+              Si se ha usado una tabla de decisión como herramienta de diseño, los grafos causa - efecto ya no son necesarios.
+              <br />
+              Para la construcción del grafo entonces se parte de los operadores booleanos, partimos de los siguientes conceptos:
+            </p>
+            <img src=".\img\Grafos1.png"/>
+            <p>
+              Seguimos entonces los siguientes pasos para la construcción:
+            </p>
+            <ul id="list">
+              <li>
+                1. Dividir la especificación en piezas que sean ‘trabajables’.No intentar crear un simple grafo para toda la especificación.
+              </li>
+              <li>
+                2. Identificar Causas y Efectos:
+                <ul>
+                  <li>
+                    Una causa es una única condición de entrada.
+                  </li>
+                  <li>
+                    Un efecto es una condición de salida o transformación del sistema.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                3. Traducir las relaciones semánticas en cada segmento en relaciones booleanas enlazando causas con efectos. Es decir, construir los grafos.
+              </li>
+              <li>
+                4. Colocar las restricciones que se aplican a las causas y efectos
+                <img src=".\img\Grafos2.png"/>
+                <img src=".\img\Grafos3.png"/>
+              </li>
+              <li>
+                5. Crear una Tabla de Decisión resumiendo todas las posibles combinaciones de estados
+                <ul id="list">
+                  <li>
+                    Las Causas son las entradas
+                  </li>
+                  <li>
+                    Los Efectos son las salidas
+                  </li>
+                  <li>
+                    Las Columnas son los casos de prueba
+                  </li>
+                </ul>
+              </li>
+              <li>
+                6. Dividir las entradas de la tabla en reglas, una por cada combinación única de estados en el grafo.
+                <ul id="list">
+                  <li>
+                    Indicar cuales combinación de estados están asociados con los efectos colocando una X (o un 1) en la columna que representa esa combinación estado condición.
+                  </li>
+                  <li>
+                    Convertir cada columna (regla) de la tabla de decisión en un caso de test
+                  </li>
+                </ul>
+              </li>
+          </ul>
+          <h3>Método Adivinación de errores:</h3>
           <p>
-            Duis sed dictum erat. Fusce condimentum purus id ultricies volutpat. Nulla feugiat orci sed enim ultricies, ut scelerisque eros euismod. Etiam interdum nisl vel leo porta, accumsan semper est tristique. Duis molestie cursus lacus. Phasellus metus ligula, commodo malesuada imperdiet vel, facilisis ut mi. Nam convallis ornare sapien id pulvinar. Aenean in interdum urna. Nullam volutpat commodo malesuada.
+            Este método de testing se basa en la experiencia del ejecutor. Consiste en realizar un análisis de los requisitos y el diseño del sistema, buscando intuir en que puntos del sistema se pudieron insertar errores y elaborar el diseño de las pruebas enfocado a atacar el sistema sobre estos casos.
+            <br />
+            Es curioso, pero en la gran mayoría de las ocasiones este método es utilizado por los tester,  no existe mucha documentación del método ni una estructuración de los pasos a seguir para este tipo de prueba.
+            <br />
+            Las historias de defectos pueden ser útiles; hay una alta probabilidad de que los errores que han aparecido en el pasado, puedan volver a aparecer. Generalmente se enfocan en:
           </p>
-          <p>
-            Donec imperdiet aliquam sapien at suscipit. Mauris sit amet porttitor mauris, vehicula volutpat justo. Curabitur porttitor quis erat sit amet porttitor. Suspendisse fringilla dui in dui efficitur ultrices et a tortor. Etiam blandit felis sit amet pharetra convallis. Maecenas tempor euismod nulla, et suscipit orci commodo sit amet. Cras quis mauris justo. Fusce faucibus massa ac quam ullamcorper cursus. Praesent fermentum quis urna efficitur semper. Vestibulum gravida sed lacus nec pretium. Suspendisse at interdum quam, ut consequat lorem. Aliquam erat volutpat. Praesent vehicula in felis id sollicitudin.
-        </p>
+          <ul id="list">
+            <li>
+              listas o strings vacíos o nulos
+            </li>
+            <li>
+              cero ocurrencias o instancias
+            </li>
+            <li>
+              números negativos
+            </li>
+          </ul>
+          <p id="TextReference">
+            FUENTE: http://taller1cdsucn.blogspot.com.co/2013/08/tecnicas-de-caja-negra.html
+          </p>
         </article>
       </section>
       <aside>

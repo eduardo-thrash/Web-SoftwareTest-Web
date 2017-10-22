@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
 
@@ -8,32 +8,31 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Técnicas de pruebas de software</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link reference CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- End  -->
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Link reference JS -->
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <!-- End  -->
+
+    <!-- Link reference fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<!-- End fonts-->
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <title>Lecturas</title>
 
   </head>
 
-  <body id="page-top">
+  <body>
 
     <!-- Navigation -->
     <nav>
       <span>TECNICAS DE PRUEBAS DE SOFTWARE</span>
-      <ul>
+      <ul id="menu">
         <li>
           <a href="index.html" class="dropbtn">Inicio</a>
         </li>
@@ -68,37 +67,119 @@
       </ul>
     </nav>
 
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">Tecnicas de pruebas de software</h1>
-          <hr>
-          <p>En un proyecto de desarrollo de software los bugs o errores son incalculables teniendo en cuenta los escenarios que pueden identificarse en la fase de pruebas o en la fase de producción.</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Sigue para ver más información.</a>
-        </div>
-      </div>
+
+
+    <hr>
+    <header>
+      <section>
+        <hgroup>
+          <h1>Tipos de pruebas de software</h1>
+          <h4>
+            A continuación se describen los principales tipos pruebas que se pueden realizar a cualquier
+            tipo de software.
+          </h4>
+        </hgroup>
+      </section>
     </header>
-    <section id="contact">
-      <div class="container">
-        <p>
-          Aunque se intente detectar todos los errores de una aplicación o sistema informático, hay errores que permanecen sin ser detectados. Pero pueden mitigarse gran cantidad de ellos aplicando técnicas ligadas a cada parte de un sistema.
-        </p>
-        <span><br><hr></span>
-        <div class="row">
-            <p>
-              Lecturas
-            </p>
-            <p>
-              Multimedia
-            </p>
-            <p>
-              Actividades
-            </p>
-            <p>
-              Autores
-            </p>
-        </div>
-      </div>
+    <hr>
+    <section id="readingsOne">
+      <section>
+        <article id= "text_body">
+          <h3>
+            Pruebas funcionales
+          </h3>
+          <p>
+            Se entiende como las Funcionalidades del Sistema cómo “lo que el sistema hace”.
+            Las Funcionalidades pueden estar descritas en las especificaciones de requerimientos,
+            especificaciones funcionales, casos de uso e inclusive no estar documentadas.
+            <br />
+            Los casos de prueba se definen a partir de estas funciones o características, así como su
+            interoperabilidad entre sistemas.
+            <br />
+            Consideran el comportamiento externo del sistema por lo que se consideran pruebas de caja negra.
+            <br />
+            Además de las pruebas sobre los módulos y funciones, pueden realizarse pruebas en áreas
+            especializadas como Pruebas de Seguridad y Pruebas de Interoperabilidad.
+          </p>
+          <h3>
+            Pruebas de características de software no funcionales
+          </h3>
+          <p>
+            Su objetivo es probar los requerimientos no funcionales, incluyendo (sin limitarse a) pruebas
+            de: Desempeño, Carga, Estrés, Usabilidad, Mantenibilidad, Confiabilidad y Portabilidad.
+            Los requerimientos no funcionales representan “cómo funciona el sistema” (en contraposición
+            con las funcionalidades que definen “lo que el sistema hace”).
+            <br />
+            Las características no funcionales del software, se pueden medir de diversas maneras, por
+            ejemplo por medio de tiempos de respuesta en el caso de pruebas de desempeño.
+            <br />
+            Pueden hacer referencias a modelos de calidad, como por ejemplo ISO 9126.
+            <br />
+            Consideran el “comportamiento externo” del sistema, en la mayoría de los casos son
+            pruebas de caja negra.
+          </p>
+          <h3>
+            Pruebas de la estructura ó arquictectura del Software
+          </h3>
+          <p>
+            Las Pruebas Estructurales es el término usado por ISTQB para las pruebas de “Caja Blanca”.
+            <br />
+            Se realizan aplicando técnicas de pruebas estructurales y técnicas estáticas, en lugar de
+            técnicas basadas en especificación.
+            <br />
+            Utiliza el concepto de “Cobertura” para definir la extensión con la cual la estructura ha
+            sido cubierta por el conjunto de pruebas, expresado como un porcentaje del elemento probado.
+            <br />
+            Si la cobertura no es del 100%, se pueden diseñar pruebas adicionales.
+            Las pruebas estructurales se basan en la arquitectura del sistema, por ejemplo arquitectura
+            de “Jerarquía de llamadas”.
+          </p>
+          <h3>
+            Pruebas de regresión y re-prueba por cambios
+          </h3>
+          <p>
+            Las Re-Pruebas son aplicadas después que un defecto es identificado y corregido, con la
+            finalidad de verificar que el defecto ya no se está presentando.
+            <br />
+            Las Pruebas de Regresión se realizan sobre un componente ya probado, para verificar que
+            no presenta nuevos defectos cuando se realiza una modificación después de dichas pruebas.
+            Deben buscarse nuevos defectos tanto en en el componente que se está probando cómo
+            otros componentes afectados por el cambio.
+            <br />
+            Se necesita tener claridad de las piezas de software que resultan afectadas por el cambio.
+            Las pruebas deben ser repetibles si han de usarse para pruebas de confirmación y regresión.
+            Incluyen pruebas Funcionales, No Funcionales y Estructurales.
+            <br />
+            Dado que las pruebas se ejecutan repetidas veces, las pruebas de regresión son
+            candidatas a la automatización de pruebas por medio de herramientas.
+          </p>
+          <h3>
+            Pruebas de mantenimiento
+          </h3>
+          <p>
+            Aplicadas sobre sistemas que están operativos en ambiente de producción.
+            Se ejecutan como resultado de modificaciones, migraciones o desincorporación de software.
+            <br />
+            Las Pruebas de Modificaciones incluyen mejoras planificadas, correctivas o de emergencia,
+            así como cambios en el entorno de sistema operativo, bases de datos, actualizaciones o parches.
+            <br />
+            Las Pruebas de Migración debe incluir pruebas operativas del nuevo entorno (Sistema operativo,
+            base de datos, etc.) así como pruebas sobre el software modificado. Si existe migración y
+            conversión de datos, también serán necesarias pruebas sobre estos.
+            <br />
+            Las Pruebas por Desincorporación incluyen pruebas de migración de datos o su archivo si se
+            requieren largos períodos de retención.
+            <br />
+            Incluye también pruebas de regresión sobre las partes del sistema que no se están cambiando.
+            <br />
+            Pueden ser difíciles de realizar si las especificaciones están desactualizadas o no existen,
+            o si no se cuenta con Testers con conocimiento del sistema.
+          </p>
+        </article>
+      </section>
+      <aside>
+        <span>Ventana Twitter</span>
+      </aside>
     </section>
 
     <footer id="">
@@ -123,19 +204,6 @@
           </p>
         <hr>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/scrollreveal/scrollreveal.min.js"></script>
-    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
 
   </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
 
@@ -8,32 +8,31 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Técnicas de pruebas de software</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link reference CSS -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- End  -->
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Link reference JS -->
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <!-- End  -->
+
+    <!-- Link reference fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<!-- End fonts-->
 
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/creative.min.css" rel="stylesheet">
+    <title>Lecturas</title>
 
   </head>
 
-  <body id="page-top">
+  <body>
 
     <!-- Navigation -->
     <nav>
       <span>TECNICAS DE PRUEBAS DE SOFTWARE</span>
-      <ul>
+      <ul id="menu">
         <li>
           <a href="index.html" class="dropbtn">Inicio</a>
         </li>
@@ -68,37 +67,110 @@
       </ul>
     </nav>
 
-    <header class="masthead">
-      <div class="header-content">
-        <div class="header-content-inner">
-          <h1 id="homeHeading">Tecnicas de pruebas de software</h1>
-          <hr>
-          <p>En un proyecto de desarrollo de software los bugs o errores son incalculables teniendo en cuenta los escenarios que pueden identificarse en la fase de pruebas o en la fase de producción.</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#contact">Sigue para ver más información.</a>
-        </div>
-      </div>
+
+
+    <hr>
+    <header>
+      <section>
+        <hgroup>
+          <h1>Técnica de pruebas basada en la experiencia</h1>
+          <h4>
+            Las pruebas basadas en la experiencia también se denominan pruebas intuitivas
+            (“intuitivetesting”)e incluyen: predicción de errores (“error guessing”)
+            (pruebas orientadas a puntos débiles) y pruebas exploratorias
+            (pruebas iterativas basadas en el conocimiento adquirido respecto del sistema)
+        </h4>
+        </hgroup>
+      </section>
     </header>
-    <section id="contact">
-      <div class="container">
-        <p>
-          Aunque se intente detectar todos los errores de una aplicación o sistema informático, hay errores que permanecen sin ser detectados. Pero pueden mitigarse gran cantidad de ellos aplicando técnicas ligadas a cada parte de un sistema.
-        </p>
-        <span><br><hr></span>
-        <div class="row">
-            <p>
-              Lecturas
-            </p>
-            <p>
-              Multimedia
-            </p>
-            <p>
-              Actividades
-            </p>
-            <p>
-              Autores
-            </p>
-        </div>
-      </div>
+    <hr>
+    <section id="readingsOne">
+      <section>
+        <article id= "text_body">
+          <p>
+            Las pruebas basadas en la experiencia son aquellas en las que las
+            pruebas se derivan de la habilidad e intuición del probador y de su
+            experiencia con aplicaciones y tecnologías similares. Si se utilizan
+            para aumentar las técnicas sistemáticas, estas técnicas pueden ser
+            útiles a la hora de identificar pruebas especiales que no pueden
+            capturarse fácilmente mediante técnicas formales, especialmente
+            si se aplican después de adoptar enfoques más formales. No obstante,
+            esta técnica puede tener distintos grados de efectividad, en función
+            de la experiencia del probador.
+            <br />
+            Una técnica basada en la experiencia muy usada es la predicción de error.
+            En general los probadores anticipan los defectos en base a su experiencia.
+            Un enfoque estructurado de la técnica de predicción de error consiste
+            en enumerar una lista de posibles defectos y diseñar pruebas para atacar dichos defectos.
+            Este enfoque sistemático se denomina ataque de faltas. Esta lista
+            de defectos y fallos puede elaborarse en base a la experiencia,
+            a los datos disponibles sobre defectos y fallos y a partir
+            del conocimiento común sobre por qué falla el software.
+          </p>
+          <p>
+            Las pruebas exploratorias coinciden con las fases de diseño
+            de pruebas, ejecución de pruebas , registro de pruebas y
+            aprendizaje , en base a un contrato de pruebas que contempla
+            los objetivos de las pruebas, y se llevan a cabo dentro de
+            los períodos de tiempo establecidos.
+          </p>
+          <p>
+            Se trata de un enfoque especialmente útil en los casos en
+            los que las especificaciones son escasas o inadecuadas y
+            existe una importante presión temporal, o para aumentar o
+            complementar otras pruebas más formales. Asimismo, puede servir
+            como comprobación del proceso de pruebas, para ayudar a
+            garantizar que los defectos más graves han sido efectivamente detectados.
+          </p>
+          <p>
+            Por definiciòn tecnica, son un practica para la creación de casos de
+            pruebas sin un claro
+            enfoque metodológico basada en la intuición y experiencia del probador.
+            Los casos de prueba están basados en la intuición y experiencia.
+          </p>
+          <ul id="list">
+            <li>
+              ¿Dónde se han acumulado errores en el pasado?
+            </li>
+            <li>
+              ¿Dónde falla normalmente el software?
+            </li>
+          </ul>
+            <img src=".\img\tecnica basada en la experiencia.png" />
+          <h3>
+            Fundamentos.
+          </h3>
+          <p>
+            Las pruebas basadas en la experiencia también se denomina
+            pruebas intuitivas ("intuitive testing") e incluyen predicciones
+            de errores ("error guessing")( pruebas orientadas a puntos débiles)
+            y pruebas exploratorias (pruebas iterativas basadas en el
+            conocimiento adquiridos respecto del sistema).
+            <br />
+            Principalmente aplicadas con el objeto de completar otros casos de
+            pruebas generados con un mayor formalismo.
+            No cumple los criterios de un proceso de prueba sistemático.
+            <br />
+            Frecuentemente produce casos de pruebas adicionales que no podrían
+            ser creados con otras prácticas, por ejemplo:
+          </p>
+          <ul id="list">
+            <li>
+              Pruebas de un año bisiesto posterior al año 60 (problema conocido en el pasado)
+            </li>
+            <li>
+              Conjuntos vacíos en valores de entrada (una aplicación similar ha
+              tenido valores en estas circunstancias).
+            </li>
+            <li>
+              Diseño de caso de prueba.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <aside>
+        <span>Ventana Twitter</span>
+      </aside>
     </section>
 
     <footer id="">
@@ -123,19 +195,6 @@
           </p>
         <hr>
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/popper/popper.min.js"></script>
-    <script src="js/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/scrollreveal/scrollreveal.min.js"></script>
-    <script src="js/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/creative.min.js"></script>
 
   </body>
 
