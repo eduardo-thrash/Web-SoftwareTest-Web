@@ -5,38 +5,69 @@ body,html{
 }
 
 body {
-  background-color: #333333;
+  background-color: #B3B3B3;
   background-size: cover;
   font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  width:100%;
+  height:40%
+}
+
+#body-add{
+  background-color: #F47920;
+  height: 70%;
+  width: 100%;
+  position: absolute;
 }
 
 /*---------------------Index-------------------------*/
+/*
 
-.row{
-  margin: 1%;
-}
 
-.row p{
-  text-transform: uppercase;
-  padding: 3% 87px;
-  float: left;
-  background: #f05f40;
-  text-align: center;
-}
+
 
 .container p{
   text-transform: uppercase;
   padding: 10px 87px;
   margin: 1% 2%;
-  background: #F47920;/*
+  background: #F47920;
   margin: 0 30px;
-  text-align: center;*/
+  text-align: center;
+}
+*/
+.container{
+  background-color: #cccccc;
+  width: 98%;
+  margin: auto;
+}
+
+.container p{
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 90%;
+  margin: auto;
+}
+
+.row{
+  background-color: #cfda25;
+  margin: auto;
+}
+
+.row p{
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-weight: bold;
+  background-color: #F47920;
+  float: left;
+  padding: 5% 2% 5% 2%;
+  width: 15%;
+  margin: 3%;
+
 }
 
 /*----------------------------Header----------------------------*/
 header > section{
-  background-color: #f42222;
-  padding: 1% 5% 1% 8%;
+  background-color: #005883;
+  padding: 4% 5% 5% 8%;
 }
 
 header.masthead .header-content{
@@ -89,7 +120,7 @@ header.masthead .header-content .header-content-inner h1{
 }
 
 .container{
-  padding: 5% 1% 15% 1%;
+  padding: 5% 1% 25% 1%;
 }
 
 .navbar-nav>li.nav-item>a.nav-link:hover{
@@ -112,7 +143,7 @@ header.masthead{
 .btn-primary{
   color:#fff;
   border-color:#f05f40;
-  background-color:#f19755;
+  background-color:#0e435f;
   text-decoration: none;
 }
 
@@ -127,16 +158,22 @@ li a, .dropbtn {
     text-align: center;
     padding: 0px 16px 0px 16px;
     text-decoration: none;
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-weight: bold;
 }
 
 nav{
-   background-color: #01121b;
+   background-color: #0e3f58;
    padding: 0 70px 50px 70px;
 }
 
 nav > span{
    padding: 15px 10px 10px 10px;
    float: left;
+   color: #ffffff;
+   font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+   font-size: 15px;
+   font-weight: bold;
 }
 
 #menu ul{
@@ -161,7 +198,7 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #8dba28;
+  background-color: #0e3f58;
   width: 140px;
   z-index: 1;
   border-bottom-left-radius: 5px;
@@ -213,6 +250,11 @@ h1,h2,h3,h4,h5,h6{
   font-family:'Open Sans','Helvetica Neue',Arial,sans-serif
 }
 
+#title{
+  font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+  color: #ffffff;
+}
+
 p{
   font-size:12px;
   line-height:1.5;
@@ -223,7 +265,7 @@ p{
 #readingsOne{
    background-color: #ffffff;
    padding: 10px;
-   margin: 2% 10% 5% 15%;
+   margin: 0% 10% 5% 15%;
    width: 70%;
    border-radius: 5px;
 }
@@ -243,20 +285,27 @@ img {
 hr{
   width:200px;
   border-width:3px;
-  border-color: #F47920;
+  border-color: #F0B429;
 }
 
 #count{
-  width: 100%;
-  height: 100%;
+  background-color: #ea5757;
+  width: 30%;
+  height: 30%;
 }
 
 #complement{
-  margin: 5% 10% 5% 10%;
+  background-color: #57ea62;
+  width: 90%;
+  margin: auto;
 }
 #complement article{
+  padding-top: 2%;;
   float: left;
-  padding: 5% 15% 5% 15%;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  text-align: center;
 }
 
  /*---------------------------Buttons---------------------------*/
@@ -284,22 +333,34 @@ hr{
  }
 /*----------------------------Footer----------------------------*/
 footer{
-  background-color: #285eba;
-  height: 40%;
-}
-
-#data-footer{
-
+  background-color: #005883;
+  height: 56%;
+  padding: 1% 5% 0% 5%;
 }
 
 .footer-row{
-
+  width: 50%;
+  float: left;
+  margin: auto;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
 .footer-row p{
-
+  font-size: 16px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  padding: 1%;
 }
 
-#data-footer-end p{
-
+.data-footer-end p{
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 4%;
+  padding: 14% 0% 0% 0%;
+  float: inherit;
 }
