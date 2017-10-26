@@ -40,6 +40,8 @@ body {
   margin: auto;
 }
 
+
+
 .container p{
   font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
   text-align: center;
@@ -307,7 +309,10 @@ hr{
   margin: auto;
   text-align: center;
 }
-
+imgauthors{
+  width: 30%;
+  height: 30%;
+}
  /*---------------------------Buttons---------------------------*/
 .btn-xl{
   padding:15px 30px
