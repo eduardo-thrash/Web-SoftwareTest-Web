@@ -265,6 +265,13 @@ p{
    text-align: justify;
 }
 
+#TextReference{
+  margin: 5px 0px;
+  font-style: italic;
+  font-size: 11px;
+  font-family:'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
 /*----------------------------Images and decorative----------------------------*/
 img {
   align-items: center;
@@ -444,4 +451,11 @@ footer{
     width: 80%;
     font-weight: bold;
     margin: auto;
+}
+
+iframe{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-bottom: 100px;
 }
